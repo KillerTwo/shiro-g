@@ -24,6 +24,7 @@
     <!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
         p:prefix="/project/" p:suffix=".jsp" /> -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <!-- <property name="order"value="1"></property> -->
       <property name="prefix" value="/WEB-INF/"></property>
       <property name="suffix" value=".jsp"></property>
     </bean>
@@ -33,15 +34,20 @@
 	  </bean>
 	  
 	  <!-- 注册XmlViewResolver，用于iReport & JasperReports报表生成 -->  
-		<bean id="jasperReportResolver" class="org.springframework.web.servlet.view.XmlViewResolver">  
+		<!-- <bean id="jasperReportResolver" class="org.springframework.web.servlet.view.XmlViewResolver">  
 		    <property name="order">  
 		        <value>0</value>  
 		    </property>  
 		    <property name="location">  
 		        <value>WEB-INF/jasper/jasper-defs.xml</value>  
 		    </property>  
-		</bean> 
-	  
+		</bean> -->
+		<!-- <bean id="pdfViewResolver"
+       class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+        <property name="order"value="0"></property>
+        <property name="basename"value="classpath:jasper/Demo01.jasper"></property>
+    </bean> -->
+	<!-- <import resource="spring-shiro-config.xml"/> -->
     <!-- 不拦截静态资源文件 -->
     <!-- <mvc:resources location="/" mapping="/**" /> -->
     <mvc:default-servlet-handler/>

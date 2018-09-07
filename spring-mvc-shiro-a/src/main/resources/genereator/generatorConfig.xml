@@ -51,7 +51,7 @@
     </javaClientGenerator>
     
    
-    <table tableName="member">
+    <table tableName="users">
      
     </table>
 

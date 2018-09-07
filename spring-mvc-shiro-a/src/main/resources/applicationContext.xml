@@ -121,7 +121,7 @@
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
-    
+    <import resource="spring-shiro-config.xml"/>
     <!-- <bean id="mapperFilter" class="org.lwt.filter.MapperFilter"/>
 
     <bean class="org.lwt.filter.MapperBeanDefinitionRegistryPostProcessor"/> -->
